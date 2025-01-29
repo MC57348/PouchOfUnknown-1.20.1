@@ -1,0 +1,100 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.0.+', changing: true
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+
+group = 'AFKing'
+version = '1.0'
+
+java {
+    archivesBaseName = 'pouchofunknown'
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                pouchofunknown {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                pouchofunknown {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'pouchofunknown', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                pouchofunknown {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    maven {
+        name = "Curse Maven"
+        url = "https://cursemaven.com"
+    }
+    maven {
+        name = "BlameJared Maven"
+        url = "https://maven.blamejared.com"
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.3.7'
+
+    implementation fg.deobf("curse.maven:gamestages-268655:5790361")
+    implementation fg.deobf("curse.maven:item-stages-280316:5214094")
+    implementation fg.deobf("curse.maven:bookshelf-228525:5423987")
+    implementation fg.deobf("curse.maven:crafttweaker-239197:6132440")
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "pouchofunknown",
+            "Specification-Vendor": "AFKing",
+            "Specification-Version": "1",
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.jar.archiveVersion,
+            "Implementation-Vendor" : "AFKing",
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')

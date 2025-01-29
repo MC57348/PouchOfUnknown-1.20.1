@@ -1,0 +1,9 @@
+{
+  "item.pouchofunknown.pouch": "未知之袋",
+  "tooltip.pouchofunknown.pouch": "此未知之袋中有%s个物品",
+  "message.pouchofunknown.none": "你无法捡起此物品，你需要一个未知之袋来捡起它",
+  "message.pouchofunknown.pickup": "你捡起了%s个%s，已将其存入未知之袋",
+  "message.pouchofunknown.nocanget": "未知之袋中没有可取出的物品",
+  "message.pouchofunknown.full": "你的物品栏没地方存放从未知之袋中取出的物品，已将其丢出",
+  "message.pouchofunknown.get": "你从未知之袋中取出了%s个物品"
+}

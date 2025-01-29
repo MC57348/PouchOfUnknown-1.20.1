@@ -1,0 +1,54 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="pouchofunknown"
+version="${file.jarVersion}"
+displayName="PouchOfUnknown"
+authors="AFKing"
+description='''
+PouchOfUnknown reloaded from wzpMC
+'''
+
+[[dependencies.pouchofunknown]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.pouchofunknown]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.pouchofunknown]]
+    modId="crafttweaker"
+    mandatory=false
+    versionRange="[14.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.pouchofunknown]]
+    modId="gamestages"
+    mandatory=false
+    versionRange="[15.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.pouchofunknown]]
+    modId="itemstages"
+    mandatory=false
+    versionRange="[8.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.pouchofunknown]]
+    modId="bookshelf"
+    mandatory=false
+    versionRange="[20.2,)"
+    ordering="AFTER"
+    side="BOTH"
