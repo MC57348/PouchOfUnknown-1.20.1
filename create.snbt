@@ -1,0 +1,841 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create"
+	group: ""
+	icon: "create:large_cogwheel"
+	id: "100C477F4E63F20A"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"欢迎来到机械动力的世界！"
+				""
+				"这个模组将为你带来独特的机械体验。"
+				""
+				"让我们开始探索吧！"
+			]
+			id: "57A7A5C79389A96A"
+			rewards: [{
+				id: "1E5B06A1884F3578"
+				item: "create:wrench"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				icon: "create:wrench"
+				id: "695A0E0BC4B78AEC"
+				title: "机械动力的世界"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["57A7A5C79389A96A"]
+			description: ["安山合金是机械动力的基础材料，你会经常用到它。"]
+			id: "0F16498769DFB3B0"
+			rewards: [{
+				count: 32
+				id: "50217BC8953EBD3E"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			tasks: [{
+				count: 32L
+				id: "5D2B9139C49F5ABA"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["传动杆是传递旋转力的基础部件。"]
+			id: "5B36DE3826F26963"
+			tasks: [{
+				count: 16L
+				id: "2F89C6C2CD322B51"
+				item: "create:shaft"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: [
+				"齿轮是机械动力中重要的传动部件。"
+				""
+				"它们可以改变旋转方向和速度。"
+			]
+			id: "3E5E0C768038CDF4"
+			rewards: [{
+				count: 8
+				id: "76537C95327D603D"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "68F2BD699AADA753"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: [
+				"大齿轮是更大的传动部件。"
+				""
+				"它们可以与小齿轮配合，实现更复杂的传动。"
+			]
+			id: "23A9617F183C4EB1"
+			rewards: [{
+				count: 8
+				id: "01DCE2A5A57DAEC5"
+				item: "create:large_cogwheel"
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "3E2A4428BDE92738"
+				item: "create:large_cogwheel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["23A9617F183C4EB1"]
+			description: [
+				"水车是一种简单的动力来源。"
+				""
+				"将它放在流动的水边，就能产生旋转力。"
+			]
+			id: "1AC0B7934F275EDE"
+			rewards: [{
+				id: "5118928E884676B3"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			tasks: [{
+				count: 3L
+				id: "35709DE2871F0CED"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["封闭式风扇有多种用途，如冷却、加热或推动物品。"]
+			id: "1E9B2D814F50A265"
+			tasks: [{
+				id: "1A4B96C7C821174E"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["齿轮箱可以改变旋转方向，是构建复杂机械的重要部件。"]
+			id: "4285510271B5223D"
+			tasks: [{
+				id: "1840DB80F48921E2"
+				item: "create:gearbox"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["离合器可以控制动力的传递，让你的机器更加灵活。"]
+			id: "2BB3DB19D5EFC7E2"
+			tasks: [{
+				id: "54F14BE619292D1D"
+				item: "create:clutch"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["变速箱可以改变旋转速度，对于精确控制机器很有用。"]
+			id: "67A46ED73E488CEE"
+			tasks: [{
+				id: "0CE491535E6FA50B"
+				item: "create:gearshift"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["链式传动装置可以在较远距离传递动力。"]
+			id: "7F8E50FA436DB4E6"
+			tasks: [{
+				id: "1674E46511507301"
+				item: "create:encased_chain_drive"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7F8E50FA436DB4E6"]
+			description: [
+				"可调节链式传动装置更加灵活。"
+				""
+				"它可以根据需要改变传动比。"
+				""
+				"这对于精确控制机器速度非常有用。"
+			]
+			id: "54EC1C7FC1DA9107"
+			tasks: [{
+				id: "115F81D0A661F71F"
+				item: "create:adjustable_chain_gearshift"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["机械压力机可以压制物品，是许多加工过程的核心。"]
+			id: "2D41B04C75FA02BC"
+			tasks: [{
+				id: "52136CB29F02E923"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D41B04C75FA02BC"]
+			description: ["搅拌器可以混合多种材料，是制作合金和其他复杂物品的关键。"]
+			id: "5DC892BA79EB52EC"
+			tasks: [{
+				id: "057EDA1FF37AE35E"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["工作盆是许多加工过程的容器，经常与其他机器配合使用。"]
+			id: "75CBB5BD8C1DFEA1"
+			tasks: [{
+				id: "56DBF4356117F26A"
+				item: "create:basin"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2D41B04C75FA02BC"]
+			description: [
+				"烈焰人燃烧器是一种强大的热源。"
+				""
+				"它可以为各种加热过程提供所需的温度。"
+			]
+			id: "1B182A30604655E2"
+			tasks: [{
+				id: "50FED4EED98A8648"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["47897D827C50629D"]
+			description: ["机械活塞可以推动方块，用于自动化和建筑。"]
+			id: "45EC31812FB9934D"
+			tasks: [{
+				id: "0BD1BA7949BB5855"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "create:mechanical_piston"
+							}
+							{
+								Count: 1b
+								id: "create:sticky_mechanical_piston"
+							}
+						]
+					}
+				}
+				title: "机械活塞"
+				type: "item"
+			}]
+			title: "机械活塞"
+			x: 3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4F95F00ED78FBAB9"]
+			description: ["速度计可以测量旋转速度，帮助你优化机器性能。"]
+			id: "29917E6196649F5D"
+			tasks: [{
+				id: "6A5BBAA13F1730F2"
+				item: "create:speedometer"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4F95F00ED78FBAB9"]
+			description: ["应力计可以测量机器的应力，帮助你平衡动力系统。"]
+			id: "48BE7DAC5082044D"
+			tasks: [{
+				id: "10CB6FCDDD3E38D4"
+				item: "create:stressometer"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: [
+				"矿车装配器可以自动组装矿车。"
+				""
+				"它可以用来创建复杂的运输系统。"
+				""
+				"对于大规模物流非常有用。"
+			]
+			id: "09936F8FCEA72C5C"
+			tasks: [{
+				id: "15BA4109324B4A44"
+				item: "create:cart_assembler"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["线性底盘是构建移动结构的基础部件。"]
+			id: "51EA6B1452883AB2"
+			tasks: [{
+				id: "4A80AC1DE4002191"
+				item: "create:linear_chassis"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["径向底盘可以用来创建旋转的结构。"]
+			id: "459BA85E48B343AE"
+			tasks: [{
+				id: "3598B8EDD5834F92"
+				item: "create:radial_chassis"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["风车是一种强大的动力来源，尤其适合在高处使用。"]
+			id: "76CBFA38D021AC95"
+			tasks: [{
+				id: "3652E21F6AD6D33F"
+				item: "create:white_sail"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["机械钻头可以自动挖掘方块，非常适合采矿和挖掘。"]
+			id: "3029E1E133B91ED8"
+			tasks: [{
+				id: "072131C19C185896"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["机械锯可以自动切割原木和其他方块。"]
+			id: "72DCE154E1714890"
+			tasks: [{
+				id: "36C1D75275CE2AAB"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["机械手是一种versatile自动化工具，可以执行多种任务。"]
+			id: "3314FBC4FEAE1D08"
+			tasks: [{
+				id: "79D2F12337D1F637"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["48EA6D9923E38B71"]
+			description: [
+				"便携式物品接口允许在移动结构间传输物品。"
+				""
+				"这对于创建复杂的自动化系统非常有用。"
+			]
+			id: "134BC365E77C6DB8"
+			tasks: [{
+				id: "2D54A1DB29903A0A"
+				item: "create:portable_storage_interface"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["收割机可以自动收获作物，是农场自动化的关键。"]
+			id: "4C31649D721F76B5"
+			tasks: [{
+				id: "1357FF84B9B133C4"
+				item: "create:mechanical_harvester"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["犁可以自动耕地，为大规模农业做准备。"]
+			id: "0759CA52EECF3B49"
+			tasks: [{
+				id: "7B9B459AAB9F6483"
+				item: "create:mechanical_plough"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["57A7A5C79389A96A"]
+			description: ["安山岩机壳是许多机械的基础部件。"]
+			id: "17885C2DE986F1BD"
+			tasks: [{
+				id: "0341E5F9B7361D1F"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1DA6B8B2DCC97809"]
+			description: ["黄铜机壳是更高级机械的基础部件。"]
+			id: "48EA6D9923E38B71"
+			tasks: [{
+				id: "23E40F6D58658887"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2D41B04C75FA02BC"]
+			description: ["铜机壳用于特定的机械，尤其是与流体相关的设备。"]
+			id: "3F663416E824720C"
+			tasks: [{
+				id: "7FE62F264B4FA5DE"
+				item: "create:copper_casing"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4194397DFD0199C2"]
+			description: [
+				"机械臂是一种高级的自动化工具。"
+				""
+				"它可以在不同容器间移动物品。"
+				""
+				"非常适合创建复杂的自动化生产线。"
+			]
+			id: "3F2C1A81C17D2D67"
+			tasks: [{
+				id: "3EC06DE78E520CC9"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["安山岩漏斗用于自动输入输出物品。"]
+			id: "47A6769B6BF1A46D"
+			tasks: [{
+				id: "5CB1191F8F7BBAA4"
+				item: "create:andesite_funnel"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1DA6B8B2DCC97809"]
+			description: ["黄铜漏斗是更高级的物品传输设备，具有更多功能。"]
+			id: "495B0CC178B4CFA9"
+			tasks: [{
+				id: "1C5B4D14826937BB"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: ["安山岩隧道用于长距离物品传输。"]
+			id: "7C8CDD259495A31A"
+			tasks: [{
+				id: "07162DA2FD7B0E05"
+				item: "create:andesite_tunnel"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1DA6B8B2DCC97809"]
+			description: ["黄铜隧道是更高级的物品传输通道，具有过滤功能。"]
+			id: "78656C89EEE80DB5"
+			tasks: [{
+				id: "688E14A6938EBEF7"
+				item: "create:brass_tunnel"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["机械动力底座是许多自动化过程的核心组件。"]
+			id: "7F0D59EC1573FDC0"
+			tasks: [{
+				id: "7EFB9500BBDD745C"
+				item: "create:depot"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2D41B04C75FA02BC"]
+			description: ["料斗用于自动输送物品，尤其适合垂直传输。"]
+			id: "3D2A03EB2B91E9C1"
+			tasks: [{
+				id: "105F8859D59964C4"
+				item: "create:chute"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["57A7A5C79389A96A"]
+			description: [
+				"工程师护目镜可以显示机械的详细信息。"
+				""
+				"它是诊断和优化你的机器的重要工具。"
+			]
+			id: "4F95F00ED78FBAB9"
+			tasks: [{
+				id: "6989058FD488CE64"
+				item: "create:goggles"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["57A7A5C79389A96A"]
+			description: [
+				"玫瑰石英是制作一些高级组件的重要材料。"
+				""
+				"你需要用砂纸打磨原石英来获得它。"
+			]
+			id: "610DEC4FC4FBB63E"
+			rewards: [{
+				id: "43C2760F8FDD84CA"
+				item: {
+					Count: 1
+					id: "create:sand_paper"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "3BC40DF423178031"
+				item: "create:polished_rose_quartz"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C2309DB4B890E71"]
+			description: ["烈焰蛋糕是一种高效的燃料，可以大大提高烈焰人燃烧器的效率。"]
+			id: "4C77ABCD41383F32"
+			tasks: [{
+				id: "2E9A4E9BFFC10819"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1DA6B8B2DCC97809"]
+			description: [
+				"机械动力工作台可以自动执行复杂的制作配方。"
+				""
+				"它是大规模自动化生产的关键设备。"
+			]
+			id: "4194397DFD0199C2"
+			tasks: [{
+				id: "65C6E83AF17405E0"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["移动框架支架是创建大型移动结构的重要组件。"]
+			id: "75B14A09FE39EDDA"
+			tasks: [{
+				id: "7DA78C3A582368E2"
+				item: "create:gantry_carriage"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7F0D59EC1573FDC0"]
+			description: ["重力投掷器可以将物品投射到特定位置，对于自动化运输很有用。"]
+			id: "4EA4EDD5A7923F98"
+			tasks: [{
+				id: "34313AA5D327317C"
+				item: "create:weighted_ejector"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3D2A03EB2B91E9C1"]
+			description: ["智能料斗具有过滤功能，可以更精确地控制物品流动。"]
+			id: "7EEEEDD5FF31ACD3"
+			tasks: [{
+				id: "37EE09651ED58F6F"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57A7A5C79389A96A"]
+			description: [
+				"结构图工作台用于创建和修改结构图。"
+				""
+				"这是设计大型建筑和机器的重要工具。"
+			]
+			id: "0CF69DBA9573A7B3"
+			rewards: [{
+				id: "35DCC6CB7C472F17"
+				item: "create:schematic_and_quill"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0FB1E9BD14FE8EF8"
+				item: "create:schematic_table"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0CF69DBA9573A7B3"]
+			description: ["结构炮可以自动构建预先设计的结构，大大简化了大型建筑的施工过程。"]
+			id: "7D67058592EE5958"
+			tasks: [{
+				id: "5D989C876E9B8AA5"
+				item: "create:schematicannon"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			description: ["绳索滑轮可以垂直移动方块，对于创建电梯或垂直运输系统很有用。"]
+			id: "24E658BA47367A44"
+			tasks: [{
+				id: "0674C07C7DE332A9"
+				item: "create:rope_pulley"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3F663416E824720C"]
+			description: ["流体分配器可以精确控制液体的分配，对于复杂的流体处理过程很重要。"]
+			id: "1C2309DB4B890E71"
+			tasks: [{
+				id: "6772D04457414991"
+				item: "create:spout"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F663416E824720C"]
+			description: ["软管滑轮可以在远处抽取或放置流体，非常适合大规模的流体运输。"]
+			id: "77382D4114E901CB"
+			tasks: [{
+				id: "739701B00C0F8A7B"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["17885C2DE986F1BD"]
+			id: "47897D827C50629D"
+			tasks: [{
+				id: "473DA14538E1B94C"
+				item: "create:piston_extension_pole"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3F663416E824720C"]
+			description: [
+				"便携式流体接口允许在移动结构间传输流体。"
+				""
+				"这对于创建复杂的流体处理系统非常有用。"
+			]
+			id: "71B1B53A03A16296"
+			tasks: [{
+				id: "339D26EDFBB54047"
+				item: "create:portable_fluid_interface"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5DC892BA79EB52EC"]
+			id: "1DA6B8B2DCC97809"
+			tasks: [{
+                			dependencies: ["5DC892BA79EB52EC"]
+			id: "1DA6B8B2DCC97809"
+			tasks: [{
+				icon: "create:brass_ingot"
+				id: "07896B715ED0E04F"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:ingots/brass"
+					}
+				}
+				title: "任意黄铜锭"
+				type: "item"
+			}]
+			title: "黄铜制作"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D41B04C75FA02BC"]
+			description: ["超级胶水可以将方块粘在一起，对于创建复杂的移动结构非常有用。"]
+			id: "1F58AA51814C7568"
+			tasks: [{
+				id: "1A9BC10CDDA9FCF2"
+				item: {
+					Count: 1
+					id: "create:super_glue"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0F16498769DFB3B0"]
+			description: [
+				"传送带是自动化运输的基础。"
+				""
+				"它们可以高效地移动物品和实体。"
+			]
+			id: "13AEBC331F29BC3D"
+			tasks: [{
+				count: 4L
+				id: "4D2A907287515990"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -4.5d
+		}
+	]
+	title: "机械动力"
+}
+
