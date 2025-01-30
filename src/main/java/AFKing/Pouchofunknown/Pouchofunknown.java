@@ -4,6 +4,7 @@ import AFKing.Pouchofunknown.Utils.ItemUtils;
 import net.darkhax.itemstages.Restriction; 
 import net.darkhax.itemstages.RestrictionManager;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
 import java.util.*;
 
@@ -24,11 +26,20 @@ public class Pouchofunknown {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ItemLoader.POUCH);
+        }
+    }
+    
     public Pouchofunknown() {
         LOGGER.info("Pouchofunknown mod is initializing!");
         MinecraftForge.EVENT_BUS.addListener(this::onPlayerPickupItem);
         MinecraftForge.EVENT_BUS.register(this);
         ItemLoader.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::addCreative);
+
         LOGGER.info("Pouchofunknown mod initialization complete!");
     }
 

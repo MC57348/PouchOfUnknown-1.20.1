@@ -7,10 +7,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 
 public class ItemLoader {
-    public static final String MODID = "pouchofunknown";
-    
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    
-    public static final RegistryObject<Item> PouchOfUnknown = ITEMS.register("pouch", ItemPouchofunknown::new);
-}
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "pouchofunknown");
 
+    public static final RegistryObject<Item> POUCH = ITEMS.register("pouch", () ->
+        new Item(new Item.Properties().stacksTo(1))
+    );
+}
